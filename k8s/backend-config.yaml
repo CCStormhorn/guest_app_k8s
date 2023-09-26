@@ -40,7 +40,7 @@ spec:
               value: postgresql://postgres:$(POSTGRES_PASSWORD)@db-service:5432/guests_db
             - name: FLASK_ENV
               value: development
-          image: docker.io/library/guest_app_k8s-backend:latest
+          image: k8storm.azurecr.io/k8s-guests:latest
           imagePullPolicy: IfNotPresent
           name: backend-container
           ports:
